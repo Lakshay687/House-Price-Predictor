@@ -1,8 +1,0 @@
-<!doctype html><html><head><meta charset="utf-8"><title>House Price Predictor</title><link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"></head><body><main><section><h1>🏠 House Price Predictor</h1><p>Enter house details to estimate the price.</p><form method="post">
-<label>Area (sq ft)</label><input name="area" type="number" min="100" placeholder="1500" required>
-<label>Bedrooms</label><input name="bedrooms" type="number" min="1" placeholder="3" required>
-<label>Bathrooms</label><input name="bathrooms" type="number" min="1" placeholder="2" required>
-<label>House Age (years)</label><input name="age" type="number" min="0" placeholder="5" required>
-<label>Parking Spaces</label><input name="parking" type="number" min="0" placeholder="1" required>
-<label>Location</label><select name="location">{% for x in locations %}<option>{{x}}</option>{% endfor %}</select>
-<button>Predict Price</button></form>{% if prediction %}<div class="result">Estimated House Price<strong>{{prediction}}</strong></div>{% endif %}{% if error %}<div class="error">{{error}}</div>{% endif %}</section></main></body></html>
